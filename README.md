@@ -1,3 +1,3 @@
 # dynamic-static-shopifySections
 
-Simple examples for shopify dynamic and static sections liquid code.
+Simple Shopify Liquid examples for dynamic static  and block sections.

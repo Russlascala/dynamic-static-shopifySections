@@ -1,0 +1,72 @@
+<!--
+blocks are containers of settings and content
+that can be added removed reordered in a section itsef
+(sections within sections)
+
+this is a basic sample block
+
+New part is the max_blocks this sets limit for max amount of blocks in this <section>
+</section>
+-->
+
+<div id="section-cta">
+  <div class="section-header text-center">
+    <h3> {{ section.settings.text-box }} </h3>
+  </div>
+  {% for block in section.blocks %}
+  <div class="btn btn--cta">
+    <a href="{{ block.settings.link }}" class="btn btn--cta">{{ block.settings.linktext }}</a>
+  </div>
+  {% endfor %}
+
+</div>
+
+
+{% schema %}
+{
+  "name": "CTA Blocks",
+  "max_blocks": 3,
+  "settings": [
+  {
+    "id": "text-box",
+    "type": "text",
+    "label": "Heading",
+    "default": "Title"
+  }
+],
+    "blocks": [
+    {
+      "type": "select",
+      "name": "select",
+      "settings": [
+      {
+        "id": "link",
+        "type": "url",
+        "label": "Button Link"
+      },
+      {
+        "id": "linktext",
+        "type": "text",
+        "label": "Button text",
+        "default": "Click here"
+      }
+]
+    }
+],
+<!-- within the presets we have a default number of blocks which is two  -->
+  "presets": [
+    {
+      "name": "Call to Action Blocks",
+      "category": "Call To Action",
+      "blocks": [
+        {
+          "type": "select"
+        },
+      {
+          "type": "select"
+        }
+]
+    }
+]
+}
+{% endschema %}
