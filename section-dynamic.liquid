@@ -1,0 +1,63 @@
+
+
+
+<!--
+Need Presets for dynamic section
+presets have two variables that are very important (name, category)
+allows theme to know its a dynamic section. will be automatically avaliable
+to the home page.
+
+Theme automatically knows its a dynamic section will be automatically avaliable
+in the home page sections. You dont need to add this to any template to access it
+-->
+
+<div id="section-cta">
+  <div class="container">
+    <h3> {{ section.settings.text-box }} </h3>
+    <a href="{{ sections.settings.link }}" class="btn btn--cta">{{ section.settings.linktext }}</a>
+  </div>
+</div>
+<!-- three objects in array settings, heading above button, button link, and button text  -->
+{% schema %}
+{
+  "name": "Call to action",
+  "settings": [
+  {
+    "id": "text-box",
+    "type": "text",
+    "label": "Heading",
+    "default": "Title"
+  },
+  {
+    "id": "link",
+    "type": "url",
+    "label": "Button link"
+    <!-- Does not need a default because its a link -->
+  },
+  {
+    "id": "linktext",
+    "type": "text",
+    "label": "Button Text"
+    "default": "Click here"
+  }
+]
+,
+<!--
+  need presets for dynamic sections so theme knows
+  you will see these preset values on the editior in the home page.
+-->
+  "presets": [
+   {
+     "name": "Call to Action",
+     "category": "CTA button"
+   }
+]
+}
+{% endschema %}
+
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

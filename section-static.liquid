@@ -1,8 +1,41 @@
+<!--
+This is a custom static section that lives in sections folder.
+In order to use this static section you must include it in the place you want
+EX: if you want this to show up in the cart template you have to add the code
+{% section 'name-of-section' %} !this does not need the .liquid extension!
+ -->
+
+<!-- This is a custom textbox  -->
+<div id="textsection">
+  <div class="simpletext">
+    <!-- first object HTML -->
+    <h1> {{ section.settings.text-box-title }} </h1>
+    <!-- second object HTML -->
+    <h3> {{ section.settings.text-box-content }} </h3>
+  </div>
+</div>
+
+
 {% schema %}
+{
+  "name": "Section name",
+  "settings": [
   {
-    "name": "Section name",
-    "settings": []
+    <!-- first object -->
+    "id": "text-box-title", <!-- forms link to h1 above -->
+    "type": "text", <!-- the type of output Link to other types of output:  -->
+    "label": "Heading", <!-- Instructions to merchant -->
+    "default": "Title" <!-- placeholder -->
+  },
+  {
+    <!-- second object -->
+    "id": "text-box-content",
+    "type": "richtext",
+    "label": "Add custom text below",
+    "default": "<p>Add your text here</p>"
   }
+ ]
+}
 {% endschema %}
 
 {% stylesheet %}
