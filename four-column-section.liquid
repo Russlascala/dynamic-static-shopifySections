@@ -1,0 +1,118 @@
+
+
+
+<!--
+This is a four column shopify dynamic section using bootstrap and font awesome.
+Editable content:
+1. Text (1-4)
+2. Font awesome icons(1-4)
+3. Font size
+4. Font awesome Icon Color
+-->
+
+<div id="section-three-bullets" style="font-size:{{section.settings.font-size}}px;">
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-lg-3 col-md-6 mt-3">
+        <i class="{{ section.settings.fontawesome1 }}" style="color:{{ section.settings.color_font-awesome }};"></i><p> {{ section.settings.text1 }}</p>
+      </div>
+      <div class="col-lg-3 col-md-6 mt-3">
+        <i class="{{ section.settings.fontawesome2 }}" style="color:{{ section.settings.color_font-awesome }};"></i><p> {{ section.settings.text2 }}</p>
+      </div>
+      <div class="col-lg-3 col-md-6 mt-3">
+        <i class="{{ section.settings.fontawesome3 }}" style="color:{{ section.settings.color_font-awesome }};"></i><p> {{ section.settings.text3 }}</p>
+      </div>
+      <div class="col-lg-3 col-md-6 mt-3">
+        <i class="{{ section.settings.fontawesome4 }}" style="color:{{ section.settings.color_font-awesome }};"></i><p> {{ section.settings.text4 }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- three objects in array settings, heading above button, button link, and button text  -->
+{% schema %}
+{
+  "name": "Three Bullets",
+  "settings": [
+  {
+    "id": "text1",
+    "type": "text",
+    "label": "Text 1",
+    "default": "Text Goes Here"
+  },
+  {
+    "id": "fontawesome1",
+    "type": "text",
+    "label": "Font Awesome 1",
+    "default": "fas fa-shipping-fast"
+  },
+  {
+    "id": "text2",
+    "type": "text",
+    "label": "Text 2",
+    "default": "Text Goes Here"
+  },
+  {
+    "id": "fontawesome2",
+    "type": "text",
+    "label": "Font Awesome 2",
+    "default": "fas fa-check-circle"
+  },
+  {
+    "id": "text3",
+    "type": "text",
+    "label": "Text 3",
+    "default": "Text Goes Here"
+  },
+  {
+    "id": "fontawesome3",
+    "type": "text",
+    "label": "Font Awesome 3",
+    "default": "fas fa-certificate"
+  },
+  {
+    "id": "text4",
+    "type": "text",
+    "label": "Text 4",
+    "default": "Text Goes Here"
+  },
+  {
+    "id": "fontawesome4",
+    "type": "text",
+    "label": "Font Awesome 4",
+    "default": "fas fa-ring"
+  },
+  {
+    "id": "font-size",
+    "type": "range",
+    "min": 16,
+    "max": 25,
+    "step": 1,
+    "unit": "px",
+    "label": "Font Size",
+    "default": 18
+  },
+  {
+    "type": "color",
+    "id": "color_font-awesome",
+    "label": "Font Awesome Colors",
+    "default": "#2f4858"
+  }
+
+]
+,
+  "presets": [
+   {
+     "name": "Three Bullets",
+     "category": "Promotional"
+   }
+]
+}
+{% endschema %}
+
+
+{% stylesheet %}
+
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
