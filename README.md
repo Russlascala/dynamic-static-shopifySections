@@ -1,7 +1,6 @@
 # dynamic-static-shopifySections
 
-Simple Shopify Liquid examples for dynamic static  and block sections.
-
+Simple Shopify Liquid examples for dynamic, static, and block sections.
 
 1. four-column-section.liquid
   This is a dynamic Shopify section that has a four column bootstrap row with font awesome icons on top. (Editable Content: 4 text content, 4 font awesome icons, font size, and font awesome color.)
